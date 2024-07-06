@@ -1,10 +1,12 @@
 import { Outlet } from 'react-router-dom'
 
+import { LayoutContainer, Title } from './styles'
+
 export const Layout = () => {
   return (
-    <>
-      <h1>Github Finder</h1>
+    <LayoutContainer>
+      <Title>GitHub Finder :)</Title>
       <Outlet />
-    </>
+    </LayoutContainer>
   )
 }
