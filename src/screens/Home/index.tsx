@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import Search from '../../components/Search'
+import { User } from '../../components/User'
 import { UserProps } from '../../types/user'
 import { HomeContainer } from './styles'
 
@@ -24,7 +25,7 @@ export const Home = () => {
   return (
     <HomeContainer>
       <Search loadUser={loadUser} />
-      {user && <p>{user.login}</p>}
+      {user && <User {...user} />}
     </HomeContainer>
   )
 }
