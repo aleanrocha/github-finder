@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import { BackBtn } from '../../components/BackBtn'
 import { Loader } from '../../components/Loader'
+import { Repo } from '../../components/Repo'
 import { RepoProps } from '../../types/repo'
 import { ProjectsContainer } from './styles'
 
@@ -29,7 +30,9 @@ export const Projects = () => {
       <BackBtn />
       <h2>Explore os repositórios do usuário</h2>
       {repo && repo.length === 0 && <p>O usuário não possui repositórios!</p>}
-      {repo && repo.length > 0 && repo.map((repo) => <div>{repo.name}</div>)}
+      {repo &&
+        repo.length > 0 &&
+        repo.map((repo: RepoProps) => <Repo key={repo.name} {...repo} />)}
     </ProjectsContainer>
   )
 }
