@@ -12,6 +12,10 @@ const Search = ({ loadUser }: SearchProps) => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if (username === '') {
+      alert('Por favor, digite um nome de usuário!')
+      return
+    }
     loadUser(username)
   }
 
@@ -23,7 +27,7 @@ const Search = ({ loadUser }: SearchProps) => {
         <Input
           type="text"
           placeholder="Digite o nome do usuário"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value.trim())}
         />
         <Button type="submit">
           <BsSearch />
