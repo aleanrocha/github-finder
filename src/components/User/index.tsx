@@ -26,12 +26,13 @@ export const User = ({
           <Text>Seguidores:</Text>
           <Text>{followers}</Text>
         </div>
+        <span></span>
         <div>
           <Text>Seguindo:</Text>
           <Text>{following}</Text>
         </div>
       </Wrapper>
-      <Link to={'/repos'} />
+      <Link to={'/repos'}>Ver melhores projetos</Link>
     </UserContainer>
   )
 }
