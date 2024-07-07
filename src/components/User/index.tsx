@@ -32,7 +32,7 @@ export const User = ({
           <Text>{following}</Text>
         </div>
       </Wrapper>
-      <Link to={'/repos'}>Ver melhores projetos</Link>
+      <Link to={`/repos/${login}`}>Ver melhores projetos</Link>
     </UserContainer>
   )
 }

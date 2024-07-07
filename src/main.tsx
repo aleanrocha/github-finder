@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Layout } from './layout/index.tsx'
 import { Home } from './screens/Home'
+import { Projects } from './screens/Projects'
 import GlobalStyles from './styles/GlobalStyles.ts'
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/repos/:username',
+        element: <Projects />
       }
     ]
   }
