@@ -5,7 +5,7 @@ import { BackBtn } from '../../components/BackBtn'
 import { Loader } from '../../components/Loader'
 import { Repo } from '../../components/Repo'
 import { RepoProps } from '../../types/repo'
-import { ProjectsContainer } from './styles'
+import { ProjectsContainer, Title } from './styles'
 
 export const Projects = () => {
   const [repo, setRepo] = useState<RepoProps[] | [] | null>(null)
@@ -27,12 +27,12 @@ export const Projects = () => {
 
   return (
     <ProjectsContainer>
-      <BackBtn />
-      <h2>Explore os repositórios do usuário</h2>
+      <Title>Explore os repositórios do usuário: {username}</Title>
       {repo && repo.length === 0 && <p>O usuário não possui repositórios!</p>}
       {repo &&
         repo.length > 0 &&
         repo.map((repo: RepoProps) => <Repo key={repo.name} {...repo} />)}
+      <BackBtn />
     </ProjectsContainer>
   )
 }
