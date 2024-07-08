@@ -12,6 +12,11 @@ export const ProjectsContainer = styled.div`
   width: 100%;
   max-width: 580px;
   margin: 0 auto;
+
+  & > p {
+    font-size: 1.6rem;
+    opacity: 0.8;
+  }
 `
 
 export const Title = styled.h3`
